@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portofolio — Ikhsan Gazzan Sopyan</title>
+
+  <!-- SEO minimal -->
+  <meta name="description" content="Portofolio Ikhsan Gazzan Sopyan — Web Developer & UI/UX Designer. Proyek: Data Siswa, Rental Motor.">
+
+  <!-- Fonts & Libs -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1720;
+      --accent:#58a6ff;
+      --muted:#98a2b3;
+      --text:#e6edf3;
+      --glass: rgba(255,255,255,0.03);
+    }
+/* === PERBAIKAN TEKS HILANG SAAT DARK MODE === */
+
+/* Warna teks umum di kartu dan section */
+body.dark {
+  color: #e9edf5; /* teks utama */
+}
+
+/* Warna teks di elemen "card-surface" */
+body.dark .card-surface {
+  background-color: #111827 !important; /* permukaan gelap tapi masih kontras */
+  color: #f1f5fa !important;
+  border-color: #1e293b;
+}
+
+/* Warna teks sekunder seperti .text-muted */
+body.dark .text-muted,
+body.dark small,
+body.dark .text-secondary {
+  color: #a5b4c3 !important;
+}
+
+/* Warna teks di input dan textarea */
+body.dark input,
+body.dark textarea {
+  background-color: #1e293b !important;
+  color: #f1f5fa !important;
+  border-color: #334155 !important;
+}
+
+/* Placeholder biar tetap terlihat */
+body.dark ::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1;
+}
+
+/* Heading, subjudul, dan label */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark label {
+  color: #f1f5fa !important;
+}
+.text-muted {
+  color: #c7c7c7 !important;
+}
+/* Link dan ikon tetap terlihat */
+body.dark a {
+  color: #38bdf8 !important;
+}
+body.dark a:hover {
+  color: #7dd3fc !important;
+}
+
+/* Warna tombol agar kontras */
+body.dark .btn-primary {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+body.dark .btn-primary:hover {
+  background-color: #1d4ed8;
+}
+/* === PERBAIKAN KONTRAS DARK MODE TOTAL === */
+
+/* Warna dasar dark mode */
+body.dark {
+  background-color: #0a0f1c !important;
+  color: #e2e8f0 !important;
+}
+
+/* Heading dan teks utama */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
+  color: #f8fafc !important;
+}
+
+/* Teks umum dan paragraf */
+body.dark p,
+body.dark li,
+body.dark span,
+body.dark strong,
+body.dark b {
+  color: #e5e9f0 !important;
+}
+
+/* Teks halus dan label kecil */
+body.dark small,
+body.dark .text-muted,
+body.dark .text-secondary {
+  color: #aab4c8 !important;
+}
+
+/* Card dan section */
+body.dark .card-surface {
+  background: #111827 !important;
+  color: #f1f5fa !important;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3) !important;
+  border: 1px solid #1f2937 !important;
+}
+
+/* Icon dan warna aksen */
+body.dark i,
+body.dark svg {
+  color: #3b82f6 !important;
+}
+
+/* Judul section */
+body.dark .section-title h2 {
+  color: #60a5fa !important;
+}
+
+/* List skill dan teks bold */
+body.dark li b,
+body.dark li strong {
+  color: #93c5fd !important;
+}
+
+/* Teknologi cards (ikon skill) */
+body.dark .tech-card {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  color: #e2e8f0 !important;
+  transition: all 0.3s ease;
+}
+body.dark .tech-card:hover {
+  background-color: #2563eb !important;
+  color: #fff !important;
+  transform: translateY(-4px);
+}
+
+/* Tombol dan link */
+body.dark a,
+body.dark .btn {
+  color: #60a5fa !important;
+}
+body.dark a:hover,
+body.dark .btn:hover {
+  color: #93c5fd !important;
+}
+
+/* Footer */
+body.dark footer {
+  background-color: #0f172a !important;
+  color: #cbd5e1 !important;
+}
+
+/* Input & form */
+body.dark input,
+body.dark textarea {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+body.dark ::placeholder {
+  color: #94a3b8 !important;
+}
+/* Warna di footer */
+body.dark footer {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+    /* Light theme */
+    body.light {
+      --bg:#f6f9fc;
+      --card:#ffffff;
+      --accent:#1f6feb;
+      --muted:#556072;
+      --text:#0b1220;
+      --glass: rgba(11,17,32,0.03);
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:"Poppins",system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      scroll-behavior:smooth;
+      transition: background .35s ease, color .35s ease;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: linear-gradient(90deg, rgba(2,6,23,0.6), rgba(2,6,23,0.3));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    body.light .navbar{
+      background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+    .navbar-brand { color:var(--accent) !important; font-weight:700; }
+    .nav-link { color:var(--text) !important; font-weight:600; }
+    .nav-link:hover { color:var(--accent) !important; }
+
+    /* HERO - parallax */
+    #hero{
+      min-height:420px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      text-align:center;
+      padding:100px 0;
+      background-image: url('assets/img/hero-bg.jpg');
+      background-size:cover;
+      background-position:center;
+      background-attachment: fixed;
+    }
+    /* overlay untuk menjaga keterbacaan */
+    #hero::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(3,7,14,0.55), rgba(3,7,14,0.85));
+      z-index:0;
+      transition: background .35s;
+    }
+    body.light #hero::after{
+      background: linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
+    }
+    #hero .hero-inner{ position:relative; z-index:2; max-width:920px; padding:0 20px; }
+    #hero h1{ font-size:2.4rem; margin-bottom:8px; font-weight:700; letter-spacing:-0.02em; }
+    #hero p{ margin-bottom:18px; color:var(--muted); font-size:1.05rem; line-height:1.6; }
+
+    #typing { color:var(--accent); font-weight:600; border-right:2px solid var(--accent); padding-right:6px; }
+
+    /* Buttons */
+    .btn-glow {
+      border-radius:10px;
+      padding:9px 14px;
+      background:transparent;
+      color:var(--accent);
+      border:1px solid rgba(88,166,255,0.12);
+      transition: all .22s ease;
+      font-weight:600;
+    }
+    .btn-glow:hover{
+      background:var(--accent); color:#fff;
+      box-shadow:0 12px 36px rgba(88,166,255,0.12);
+    }
+    .btn-primary {
+      border-radius:10px;
+      padding:9px 14px;
+      font-weight:600;
+    }
+
+    /* Sections */
+    .container-section{ padding:64px 0; }
+    .section-title{ text-align:center; margin-bottom:30px; }
+    .section-title h2{ color:var(--accent); font-weight:700; text-shadow:0 0 10px rgba(88,166,255,0.05); }
+
+    /* Card surfaces - glass */
+    .card-surface{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      backdrop-filter: blur(8px);
+      border-radius:12px;
+      padding:20px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.45);
+      border:1px solid rgba(255,255,255,0.03);
+      transition: transform .28s ease, box-shadow .28s ease;
+    }
+    body.light .card-surface{
+      background: linear-gradient(180deg, rgba(11,17,32,0.02), rgba(11,17,32,0.00));
+      box-shadow: 0 8px 20px rgba(11,17,32,0.04);
+      border:1px solid rgba(11,17,32,0.04);
+    }
+    .card-surface:hover{ transform: translateY(-6px); box-shadow:0 20px 50px rgba(2,6,23,0.45); }
+
+    /* Projects - text only */
+    .project-list{ display:flex; flex-direction:column; gap:12px; }
+    .project-item{
+      display:flex; gap:14px; align-items:flex-start;
+      padding:14px; border-radius:10px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .project-item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(88,166,255,0.06); }
+    .project-item .icon {
+      min-width:44px; min-height:44px; border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      background: rgba(88,166,255,0.08); color:var(--accent); font-size:1.25rem;
+    }
+    .project-item h6{ margin:0; font-weight:700; color:var(--text); }
+    .project-item p{ margin:0; color:var(--muted); line-height:1.55; font-size:0.96rem; }
+
+    /* Certificates */
+    .cert-grid{ display:flex; gap:12px; flex-wrap:wrap; }
+    .cert-card{ flex:1 1 240px; padding:12px; border-radius:10px; background:var(--glass); border:1px solid rgba(255,255,255,0.02); }
+
+    /* Tech grid */
+    .tech-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap:10px; }
+    .tech-item{ display:flex; gap:10px; align-items:center; padding:10px; border-radius:10px; background: rgba(255,255,255,0.02); }
+    .tech-item i{ font-size:1.4rem; color:var(--accent); min-width:34px; display:flex; align-items:center; justify-content:center; }
+
+    /* Contact */
+    .contact-actions .btn{ margin-left:8px; }
+
+    /* Footer */
+    footer{ padding:28px 0; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02); text-align:center; }
+
+    /* Theme toggle */
+    .theme-toggle{ cursor:pointer; padding:6px 10px; border-radius:8px; display:inline-flex; align-items:center; gap:8px; background:var(--glass); border:1px solid rgba(255,255,255,0.02); color:var(--text); font-weight:600; }
+
+    /* Spacing improvements for mobile */
+    @media (max-width:768px){
+      #hero{ padding:80px 0; background-attachment: scroll; }
+      #hero h1{ font-size:1.9rem; }
+      .card-surface{ padding:16px; }
+      .project-item { padding:12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-2 fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">Ikhsan Gazzan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#hero">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Kemampuan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certs">Sertifikat</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero" class="mb-3">
+    <div class="container hero-inner" data-aos="fade-up">
+      <h1>Halo, saya <span style="color:var(--accent)">Ikhsan Gazzan Sopyan</span></h1>
+      <p><span id="typing"></span></p>
+      <div class="d-flex justify-content-center gap-2">
+        <a href="#contact" class="btn btn-glow"><i class="bi bi-chat-dots-fill"></i> Hubungi Saya</a>
+       
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="container container-section">
+    <div class="section-title" data-aos="fade-up"><h2>Tentang Saya</h2></div>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-4 text-center" data-aos="zoom-in">
+        <img src="assets/img/profile-img.jpg" alt="Foto Ikhsan" class="img-fluid rounded-3" style="max-width:260px;">
+      </div>
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="card-surface">
+          <h5><i class="bi bi-person-circle" style="color:var(--accent)"></i> Ikhsan Gazzan Sopyan</h5>
+          <p style="color:var(--muted)">Saya fresh graduate dari SMKN 1 Kawali jurusan Rekayasa Perangkat Lunak yang disiplin, bertanggung jawab, dan mampu bekerja sama dalam tim. Menguasai HTML, CSS, PHP, dan Laravel, serta memiliki ketertarikan pada pengembangan website dan desain UI/UX.</p>
+
+          <div class="mt-3">
+            <strong>Visi & Tujuan Karier</strong>
+            <p class="mb-0" style="color:var(--muted)">Ingin berkembang menjadi <strong>Full-Stack Developer</strong> yang dapat merancang antarmuka yang ramah pengguna dan mengimplementasikannya menjadi aplikasi yang handal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS & TEKNOLOGI -->
+  <section id="skills" class="container container-section">
+    <div class="section-title" data-aos="fade-up"><h2>Teknologi & Kemampuan</h2></div>
+    <div class="row g-4">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="card-surface">
+          <h5><i class="bi bi-code-slash" style="color:var(--accent)"></i> Hard Skill</h5>
+          <ul class="mt-2 mb-0" style="color:var(--muted); line-height:1.7;">
+            <li>HTML, CSS, JavaScript — <strong>Menengah</strong></li>
+            <li>PHP & Laravel — <strong>Menengah</strong></li>
+            <li>Database MySQL — <strong>Menengah</strong></li>
+            <li>Figma & Prototyping — <strong>Pemula → Berkembang</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="card-surface">
+          <h5><i class="bi bi-tools" style="color:var(--accent)"></i> Teknologi yang Dikuasai</h5>
+          <div class="tech-grid mt-3">
+            <div class="tech-item"><i class="bi bi-filetype-html"></i><div><strong>HTML</strong></div></div>
+            <div class="tech-item"><i class="bi bi-filetype-css"></i><div><strong>CSS</strong></div></div>
+            <div class="tech-item"><i class="bi bi-filetype-js"></i><div><strong>JavaScript</strong></div></div>
+            <div class="tech-item"><i class="bi bi-filetype-php"></i><div><strong>PHP</strong></div></div>
+            <div class="tech-item"><i class="bi bi-layers"></i><div><strong>Laravel</strong></div></div>
+            <div class="tech-item"><i class="bi bi-database"></i><div><strong>MySQL</strong></div></div>
+            <div class="tech-item"><i class="bi bi-pen"></i><div><strong>Figma</strong></div></div>
+            <div class="tech-item"><i class="bi bi-git"></i><div><strong>Git</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (text only) -->
+  <section id="projects" class="container container-section">
+  <div class="section-title" data-aos="fade-up">
+    <h2>Proyek Saya</h2>
+  </div>
+
+  <div class="card-surface" data-aos="fade-up">
+    <div class="project-list">
+      
+      <div class="project-item">
+        <div class="icon"><i class="bi bi-collection"></i></div>
+        <div>
+          <h6>Website Data Siswa — 2025</h6>
+          <p>
+            Aplikasi CRUD untuk mengelola data siswa (tambah/ubah/hapus), pencarian, dan export sederhana. 
+            Teknologi: PHP, MySQL, HTML/CSS.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="icon"><i class="fa-solid fa-motorcycle"></i></div>
+        <div>
+          <h6>Website Rental Motor — 2025</h6>
+          <p>
+            Sistem penyewaan motor dengan fitur login admin, katalog motor, manajemen transaksi, 
+            dan laporan sederhana. Teknologi: Laravel, MySQL, Bootstrap.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- CERTIFICATES -->
+  <section id="certs" class="container container-section">
+    <div class="section-title" data-aos="fade-up"><h2>Sertifikat & Penghargaan</h2></div>
+    <div class="cert-grid" data-aos="fade-up">
+      <div class="cert-card card-surface">
+        <strong>Dicoding — Dasar Pemrograman Web</strong>
+        <div class="text-muted small">2024</div>
+      </div>
+      <div class="cert-card card-surface">
+        <strong>Digitech — Pelatihan Landing Page Responsif</strong>
+        <div class="text-muted small">2024</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+<section id="experience" class="container container-section">
+  <div class="section-title" data-aos="fade-up">
+    <h2>Pengalaman & Pelatihan</h2>
+  </div>
+
+  <div class="row g-4">
+    <!-- PKL -->
+    <div class="col-md-6" data-aos="fade-right">
+      <div class="card-surface">
+        <h6>Praktik Kerja Lapangan — PT Inovindo Digital Media</h6>
+        <div class="text-muted small mb-2">November 2025 – Februari 2026</div>
+        <p style="color:var(--muted)">
+          Bertugas sebagai <strong>Web Developer</strong> dan UI Designer. 
+          Membantu tim dalam mengembangkan sistem manajemen konten berbasis Laravel, 
+          memperbaiki tampilan front-end menggunakan Bootstrap dan JavaScript, 
+          serta menerapkan desain responsif untuk tampilan mobile.
+        </p>
+      </div>
+    </div>
+
+    <!-- Pelatihan Web Dev -->
+    <div class="col-md-6" data-aos="fade-left">
+      <div class="card-surface">
+        <h6>Pelatihan Website Development — PT FathForce</h6>
+        <div class="text-muted small mb-2">Mei 2025</div>
+        <p style="color:var(--muted)">
+          Mengikuti pelatihan intensif mengenai pengembangan website modern menggunakan 
+          Laravel dan MySQL, serta penerapan prinsip desain antarmuka (UI/UX). 
+          Membuat proyek landing page responsif dan mempelajari dasar deployment website.
+        </p>
+      </div>
+    </div>
+
+    <!-- Pelatihan Game Dev Cikara -->
+    <div class="col-md-6" data-aos="fade-right">
+      <div class="card-surface">
+        <h6>Pelatihan Game Development — PT Cikara Studio</h6>
+        <div class="text-muted small mb-2">November 2024</div>
+        <p style="color:var(--muted)">
+          Membuat game 2D sederhana menggunakan Unity, 
+          mempelajari logika permainan, dan menerapkan sistem kontrol karakter dasar.
+        </p>
+      </div>
+    </div>
+
+    <!-- Pelatihan Game Dev Telkom -->
+    <div class="col-md-6" data-aos="fade-left">
+      <div class="card-surface">
+        <h6>Pelatihan Game Development — Universitas Telkom</h6>
+        <div class="text-muted small mb-2">November 2023</div>
+        <p style="color:var(--muted)">
+          Membuat game 3D sederhana menggunakan Unity. 
+          Mempelajari konsep dasar 3D modeling, sistem logika permainan, 
+          serta pengendalian karakter dalam dunia tiga dimensi.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION SERTIFIKAT -->
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="container container-section">
+    <div class="section-title" data-aos="fade-up"><h2>Kontak</h2></div>
+    <div class="row g-4">
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="card-surface">
+          <p><i class="bi bi-geo-alt-fill" style="color:var(--accent)"></i> Kec. Cipaku, Desa Selacai</p>
+          <p><i class="bi bi-telephone-fill" style="color:var(--accent)"></i> +62 852-1197-2735</p>
+          <p><i class="bi bi-envelope-fill" style="color:var(--accent)"></i> ikhsanghazzan@gmail.com</p>
+
+          
+        </div>
+      </div>
+
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="card-surface">
+          <h5>Hubungi Saya</h5>
+          <form id="contactForm" onsubmit="return false;">
+            <div class="row g-3">
+              <div class="col-md-6"><input id="name" class="form-control" placeholder="Nama Lengkap" required></div>
+              <div class="col-md-6"><input id="email" class="form-control" type="email" placeholder="Alamat Email" required></div>
+              <div class="col-12"><input id="subject" class="form-control" placeholder="Subjek" required></div>
+              <div class="col-12"><textarea id="message" class="form-control" rows="5" placeholder="Tulis pesan kamu..." required></textarea></div>
+
+              <div class="col-12 text-end contact-actions">
+                <button id="sendWA" class="btn btn-glow" type="button"><i class="bi bi-whatsapp"></i> Kirim via WhatsApp</button>
+                <button id="sendMail" class="btn btn-primary" type="button"><i class="bi bi-envelope-fill"></i> Kirim via Email</button>
+              </div>
+
+              <div class="col-12">
+                <small class="text-muted">Catatan: Tombol WhatsApp membuka chat dengan pesan terisi. Tombol Email membuka aplikasi email (mailto).</small>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p><strong>Ikhsan Gazzan Sopyan</strong></p>
+      <div class="mb-2">
+        <a href="https://www.tiktok.com/@sansirajaiblis?_r=1&_d=eccg2f1jm82m8g&sec_uid=MS4wLjABAAAAAYIj3CXXymQ_7VSkbmav-KxR4gMrlxxEnIyWBQs6uGPN8MJLkM_EemBYc6P-Z1Zk&share_author_id=6948727815063880705&sharer_language=id&source=h5_t&u_code=di1k5jag6dbb20&timestamp=1760671865&user_id=6948727815063880705&sec_user_id=MS4wLjABAAAAAYIj3CXXymQ_7VSkbmav-KxR4gMrlxxEnIyWBQs6uGPN8MJLkM_EemBYc6P-Z1Zk&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7555341327481194241&share_link_id=71ab36e1-d5e9-48bf-83ee-9364853ce735&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1" class="me-3"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/syntx_.404?igsh=MWo5MHdrbTZnOGc5Zg==" class="me-3"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/ikhsan-gazzan-56342537b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="me-3"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/IsanLzyn" class="me-3"><i class="bi bi-github"></i></a>
+        <a href="https://wa.me/6285211972735" target="_blank" rel="noreferrer"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <small>© <span id="year"></span> Semua hak dilindungi.</small>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Init AOS
+    AOS.init({ duration: 850, once: true, offset: 60 });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Typing effect
+    const typingEl = document.getElementById('typing');
+    const texts = ["Web Developer", "UI/UX Designer", ];
+    let tIndex = 0, cIndex = 0;
+    const typingDelay = 90, eraseDelay = 50, nextDelay = 1400;
+
+    function type() {
+      if (!typingEl) return;
+      if (cIndex < texts[tIndex].length) {
+        typingEl.textContent += texts[tIndex].charAt(cIndex);
+        cIndex++;
+        setTimeout(type, typingDelay);
+      } else {
+        setTimeout(erase, nextDelay);
+      }
+    }
+    function erase() {
+      if (!typingEl) return;
+      if (cIndex > 0) {
+        typingEl.textContent = texts[tIndex].substring(0, cIndex - 1);
+        cIndex--;
+        setTimeout(erase, eraseDelay);
+      } else {
+        tIndex = (tIndex + 1) % texts.length;
+        setTimeout(type, 400);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', type);
+
+    // Theme toggle persist
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    function applyTheme(isLight){
+      document.body.classList.toggle('light', isLight);
+      if(isLight){ themeIcon.className = 'bi bi-sun-fill'; themeLabel.textContent = 'Terang'; }
+      else { themeIcon.className = 'bi bi-moon-stars-fill'; themeLabel.textContent = 'Gelap'; }
+      localStorage.setItem('portfolioThemeLight', isLight ? '1' : '0');
+    }
+    const saved = localStorage.getItem('portfolioThemeLight');
+    applyTheme(saved === '1');
+
+    themeToggle.addEventListener('click', ()=> applyTheme(!document.body.classList.contains('light')));
+    themeToggle.addEventListener('keypress', (e)=> { if(e.key==='Enter' || e.key===' ') themeToggle.click(); });
+
+    // Contact: WA & mailto
+    const sendWA = document.getElementById('sendWA');
+    const sendMail = document.getElementById('sendMail');
+
+    function getForm(){
+      return {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        subject: document.getElementById('subject').value.trim(),
+        message: document.getElementById('message').value.trim()
+      };
+    }
+
+    sendWA.addEventListener('click', ()=>{
+      const f = getForm();
+      if(!f.name || !f.email || !f.subject || !f.message){ alert('Mohon lengkapi semua kolom.'); return; }
+      const phone = '6285211972735';
+      const text = `Halo Ikhsan,%0A%0ANama: ${encodeURIComponent(f.name)}%0AEmail: ${encodeURIComponent(f.email)}%0ASubjek: ${encodeURIComponent(f.subject)}%0A%0APesan: ${encodeURIComponent(f.message)}`;
+      const url = `https://wa.me/${phone}?text=${text}`;
+      window.open(url, '_blank');
+    });
+
+    sendMail.addEventListener('click', ()=>{
+      const f = getForm();
+      if(!f.name || !f.email || !f.subject || !f.message){ alert('Mohon lengkapi semua kolom.'); return; }
+      const mailto = `mailto:ikhsanghazzan@gmail.com?subject=${encodeURIComponent(f.subject)}&body=${encodeURIComponent("Nama: " + f.name + "\nEmail: " + f.email + "\n\n" + f.message)}`;
+      window.location.href = mailto;
+    });
+
+    // Accessibility: close navbar on nav click (mobile)
+    document.querySelectorAll('.nav-link').forEach(el=>{
+      el.addEventListener('click', ()=> {
+        const bsCollapse = document.querySelector('.navbar-collapse');
+        if(bsCollapse && bsCollapse.classList.contains('show')){
+          const collapse = new bootstrap.Collapse(bsCollapse);
+          collapse.hide();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
